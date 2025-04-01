@@ -5,11 +5,6 @@ from services.db import save_data
 app = FastAPI()
 
 
-@app.post("/setup")
-async def setup():
-    # Perform any setup tasks here
-    await setup_db()
-    return {"message": "Setup complete"}
 
 
 @app.post("/analyze-competitor")
