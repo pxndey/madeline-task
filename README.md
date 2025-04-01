@@ -43,7 +43,7 @@ Sample Query
 Sample Response
 
 ```json
-response_obj = {
+{
     "respone": {
         "original_question": "Analyze Competitor X's digital strategy",
         "expanded_question": "How does Competitor X use social media?",
