@@ -66,10 +66,10 @@ async def save_data(response):
 
         
 
-        print(f"✅ Data saved successfully! Chat ID: {chat_id}")
+        print(f"Data saved successfully\n Chat ID: {chat_id}")
 
     except Exception as e:
-        print(f"❌ Error saving data: {e}")
+        print(f"Error saving data: {e}")
         raise
     finally:
         await conn.close()
