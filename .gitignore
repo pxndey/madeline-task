@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Database-related
+*.db
+*.sqlite3
+migrations/
+
+# Logs and debug
+logs/
+*.log
+*.out
+*.err
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python package files
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# LangChain-specific (if using local models or caching)
+cache/
+*.pkl
+*.model
+
+# Docker
+docker-compose.override.yml
+
+# FastAPI Uvicorn logs (if applicable)
+*.pid
+*.sock
