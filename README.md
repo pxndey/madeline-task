@@ -2,6 +2,18 @@
 
 Task Submission for AI Engineer Role at Madeline & co.
 
+
+## Overview
+
+This application is a research agent that helps users find answers to complex questions by:
+
+1. Expanding and clarifying the user's question
+2. Generating optimal search queries
+3. Executing web searches
+4. Summarizing the results with proper citations
+
+The agent uses Google's Gemini AI for question expansion and summarization, and Tavily for web searches. All interactions are stored in a PostgreSQL database for future reference.
+
 ## Setup
 
 - Clone the repository
@@ -68,3 +80,21 @@ Sample Response
 ### Database Schema
 
 ![Schema](./data/image.png)
+
+## Design Decisions and Trade-offs
+
+**Database Schema:**
+
+- **Decision:** Used separate tables for chat history, search history, and processing steps.
+- **Trade-off:** More complex queries needed to reconstruct the full conversation.
+
+**Search Limitation:**
+
+- **Decision:** Limited to 3 search queries and 3 results per query.
+- **Trade-off:** Reduces API costs but may miss relevant information.
+
+
+**State Management:**
+
+- **Decision:** Used LangGraph's StateGraph for workflow management.
+- **Trade-off:** Adds dependency but provides a clear execution flow.
