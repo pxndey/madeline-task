@@ -11,6 +11,6 @@ app = FastAPI()
 async def analyze_competitor(request: UserRequest):
     result = call_agent(request)
     await save_data(result)
-    return {"response": result}
+    return {"response": result.get("messages")[0]}
 
 
